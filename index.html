@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+    
+    <title>Luxury Caffee</title>
+    <meta name="description" content="Premium coffee experience in Tehran. Luxury Caffee - crafted for coffee lovers." />
+    <meta name="author" content="Amir Web" />
+    
+    <meta property="og:title" content="Luxury Caffee" />
+    <meta property="og:description" content="Premium coffee experience in Tehran." />
+    <meta property="og:image" content="hero.png" />
+    
+    <link rel="icon" type="image/png" href="hero.png" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Vazirmatn:wght@300;400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- ============================================================ -->
+    <!-- صفحه بارگذاری                                                -->
+    <!-- ============================================================ -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <span class="loader-icon">☕</span>
+                <span class="loader-text">Luxury Caffee</span>
+            </div>
+            <div class="loader-progress">
+                <div class="loader-progress-bar" id="loaderProgress"></div>
+            </div>
+            <p class="loader-sub">Loading...</p>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- ناوبری                                                       -->
+    <!-- ============================================================ -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="#hero">
+                    <span class="brand-icon">☕</span>
+                    <span class="brand-name">Luxury <span class="gold">Caffee</span></span>
+                </a>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="#hero" class="nav-link active">Home</a>
+                <a href="#menu" class="nav-link">Menu</a>
+                <a href="#reservation" class="nav-link">Reservation</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================================================ -->
+    <!-- هیرو                                                         -->
+    <!-- ============================================================ -->
+    <section class="hero" id="hero">
+        <div class="hero-bg-luxury"></div>
+        
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-brand">
+                    <span class="hero-icon">☕</span>
+                    <h1 class="hero-title">
+                        <span class="gold">Luxury</span> Caffee
+                    </h1>
+                    <p class="hero-tagline">Crafted For Coffee Lovers</p>
+                    <div class="hero-buttons">
+                        <a href="#menu" class="btn-primary">View Menu</a>
+                        <a href="#reservation" class="btn-secondary">Reserve Table</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-image-wrapper">
+                <div class="hero-glow-ring"></div>
+                <img src="hero.png" alt="Luxury Caffee" class="hero-image" />
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- منو (۱۷ آیتم)                                               -->
+    <!-- ============================================================ -->
+    <section class="section" id="menu">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Our Menu</span>
+                <h2 class="section-title">Premium <span class="gold">Selections</span></h2>
+            </div>
+            <div class="menu-grid" id="menuGrid"></div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- رزرو (فارسی)                                               -->
+    <!-- ============================================================ -->
+    <section class="section section-dark" id="reservation">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">رزرو میز</span>
+                <h2 class="section-title">تجربه‌ی <span class="gold">خود را</span> رزرو کنید</h2>
+                <p class="section-desc">میز خود را رزرو کنید و از بهترین تجربه‌ی قهوه لذت ببرید.</p>
+            </div>
+            <form class="reservation-form" id="reservationForm">
+                <div class="form-group">
+                    <input type="text" id="resName" placeholder="نام و نام خانوادگی" required />
+                </div>
+                <div class="form-group">
+                    <input type="email" id="resEmail" placeholder="ایمیل" required />
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="resPhone" placeholder="شماره تماس" required />
+                </div>
+                <div class="form-group">
+                    <input type="date" id="resDate" required />
+                </div>
+                <div class="form-group">
+                    <input type="time" id="resTime" required />
+                </div>
+                <div class="form-group">
+                    <input type="number" id="resGuests" placeholder="تعداد مهمانان" min="1" max="20" required />
+                </div>
+                <div class="form-group full-width">
+                    <textarea id="resMessage" placeholder="درخواست ویژه" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn-primary btn-full">رزرو کنید</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- گالری                                                        -->
+    <!-- ============================================================ -->
+    <section class="section" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Gallery</span>
+                <h2 class="section-title">Visual <span class="gold">Inspirations</span></h2>
+            </div>
+            <div class="gallery-grid" id="galleryGrid"></div>
+        </div>
+        <div class="lightbox" id="lightbox">
+            <span class="lightbox-close" id="lightboxClose">&times;</span>
+            <img class="lightbox-image" id="lightboxImage" src="" alt="Gallery" />
+            <button class="lightbox-prev" id="lightboxPrev"><i class="fas fa-chevron-left"></i></button>
+            <button class="lightbox-next" id="lightboxNext"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- درباره ما (فارسی)                                           -->
+    <!-- ============================================================ -->
+    <section class="section section-dark" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <span class="section-tag">درباره ما</span>
+                    <h2 class="section-title">جایی که <span class="gold">لوکس</span> با <span class="gold">قهوه</span> ملاقات می‌کند</h2>
+                    <p class="about-text">
+                        در Luxury Caffee، ما معتقدیم قهوه یک هنر است. هر دانه با دقت انتخاب می‌شود، 
+                        به بهترین شکل رست می‌شود و با دقت دم می‌آید تا تجربه‌ای بی‌نظیر را ارائه دهد.
+                    </p>
+                    <p class="about-text">
+                        از فضای شیک و مدرن گرفته تا باریستاهای حرفه‌ای، همه‌چیز برای ارتقای سفر قهوه‌ای شما طراحی شده است.
+                    </p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <div class="feature-icon"><i class="fas fa-award"></i></div>
+                            <div>
+                                <h4>کیفیت عالی</h4>
+                                <p>دانه‌های درجه‌یک و تازه</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="feature-icon"><i class="fas fa-user-tie"></i></div>
+                            <div>
+                                <h4>باریستای حرفه‌ای</h4>
+                                <p>تخصص در سطح جهانی</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="feature-icon"><i class="fas fa-crown"></i></div>
+                            <div>
+                                <h4>فضای لوکس</h4>
+                                <p>شیک و دلنشین</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="about.png" alt="Luxury Caffee" loading="lazy" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- تماس (انگلیسی)                                              -->
+    <!-- ============================================================ -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Contact</span>
+                <h2 class="section-title">Get In <span class="gold">Touch</span></h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-pin"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p>Tehran, Fereshteh St, No. 12</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p><a href="tel:+982122345678">+98 21 2234 5678</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Working Hours</h4>
+                            <p>Mon - Thu: 8 AM - 11 PM</p>
+                            <p>Fri - Sat: 9 AM - 12 AM</p>
+                            <p>Sun: 9 AM - 10 PM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-map">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.4993182702996!2d51.43531037594312!3d35.80458017253211!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e0407e5a0ba7d%3A0x8e8c0445f8a1f8a1!2sFereshteh%20St%2C%20Tehran!5e0!3m2!1sen!2s!4v1700000000000" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- توسعه‌دهنده                                                  -->
+    <!-- ============================================================ -->
+    <section class="contact-dev" id="contact-dev">
+        <div class="container">
+            <div class="contact-dev-wrapper">
+                <div class="contact-dev-card">
+                    <div class="contact-dev-avatar">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Designed &amp; Developed by</h3>
+                    <h2 class="contact-dev-name">Amir Web</h2>
+                    <div class="contact-dev-divider"></div>
+                    <div class="contact-dev-links">
+                        <a href="https://instagram.com/Amir0Web.dev" target="_blank" class="contact-dev-link">
+                            <i class="fab fa-instagram"></i>
+                            <span>@Amir0Web.dev</span>
+                        </a>
+                        <a href="tel:+989025131506" class="contact-dev-link">
+                            <i class="fas fa-phone"></i>
+                            <span>09025131506</span>
+                        </a>
+                    </div>
+                    <div class="contact-dev-available">
+                        <span>Available on:</span>
+                        <span class="available-badge"><i class="fab fa-whatsapp"></i> WhatsApp</span>
+                        <span class="available-badge"><i class="fas fa-comment"></i> Rubika</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- فوتر                                                         -->
+    <!-- ============================================================ -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="footer-icon">☕</span>
+                    <h2>Luxury <span class="gold">Caffee</span></h2>
+                    <p>Premium coffee experiences, crafted with passion.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#reservation">Reservation</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#contact-dev">Developer</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <div class="footer-newsletter">
+                        <h4>Newsletter</h4>
+                        <form id="newsletterForm">
+                            <input type="email" placeholder="Your email" required />
+                            <button type="submit"><i class="fas fa-arrow-right"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-bottom">
+                <span>Designed &amp; Developed by <strong>Amir Web</strong></span>
+                <span><a href="https://instagram.com/Amir0Web.dev" target="_blank">@Amir0Web.dev</a></span>
+                <span><a href="tel:+989025131506">09025131506</a></span>
+                <span>Available on WhatsApp &amp; Rubika</span>
+                <span>&copy; 2026 All Rights Reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
