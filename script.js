@@ -75,24 +75,165 @@ window.addEventListener('scroll', () => {
    ================================================================ */
 
 const menuData = [
-    { id: 1, name: 'Classic Espresso', category: 'espresso', price: '85,000', desc: 'Single-origin Ethiopian beans, perfectly extracted.', img: 'Espresso.png' },
-    { id: 2, name: 'Double Espresso', category: 'espresso', price: '105,000', desc: 'Double shot of intense, rich espresso.', img: 'double-espresso.png' },
-    { id: 3, name: 'Caramel Latte', category: 'latte', price: '125,000', desc: 'Smooth espresso with steamed milk and caramel.', img: 'latte.png' },
-    { id: 4, name: 'Vanilla Latte', category: 'latte', price: '120,000', desc: 'Classic latte with premium vanilla syrup.', img: 'iced-latte.png' },
-    { id: 5, name: 'Signature Mocha', category: 'mocha', price: '135,000', desc: 'Rich chocolate and espresso harmony.', img: 'mocha.png' },
-    { id: 6, name: 'Classic Cappuccino', category: 'cappuccino', price: '115,000', desc: 'Perfectly balanced espresso, steamed milk, and foam.', img: 'cappuccino.png' },
-    { id: 7, name: 'Cold Brew', category: 'coldbrew', price: '110,000', desc: 'Smooth, slow-steeped cold brew coffee.', img: 'cold-brew.png' },
-    { id: 8, name: 'Iced Americano', category: 'iced', price: '95,000', desc: 'Refreshing cold Americano with a citrus touch.', img: 'iced-americano.png' },
-    { id: 9, name: 'Iced Latte', category: 'iced', price: '115,000', desc: 'Chilled latte with a silky smooth texture.', img: 'iced-latte.png' },
-    { id: 10, name: 'Mango Smoothie', category: 'smoothie', price: '130,000', desc: 'Fresh mango blended with yogurt and honey.', img: 'mango-smoothie.png' },
-    { id: 11, name: 'Oreo Milkshake', category: 'smoothie', price: '145,000', desc: 'Creamy milkshake with Oreo cookies.', img: 'oreo-milkshake.png' },
-    { id: 12, name: 'Passion Fruit', category: 'smoothie', price: '140,000', desc: 'Tropical passion fruit with a tangy twist.', img: 'passion-fruit.png' },
-    { id: 13, name: 'Blue Lagoon', category: 'smoothie', price: '150,000', desc: 'Refreshing blue lemonade with a vibrant color.', img: 'blue-lagoon.png' },
-    { id: 14, name: 'Tiramisu', category: 'desserts', price: '160,000', desc: 'Classic Italian dessert with espresso-soaked layers.', img: 'tiramisu.png' },
-    { id: 15, name: 'Lava Cake', category: 'desserts', price: '170,000', desc: 'Warm chocolate lava with a melting center.', img: 'lava-cake.png' },
-    { id: 16, name: 'Croissant', category: 'breakfast', price: '90,000', desc: 'Buttery, flaky croissant made fresh daily.', img: 'croissant.png' },
-    { id: 17, name: 'Flat White & Croissant', category: 'breakfast', price: '180,000', desc: 'Signature flat white with a freshly baked croissant.', img: 'flat-white.png' },
+    {
+        "id": 1,
+        "name": "Classic Espresso",
+        "category": "espresso",
+        "usdPrice": 4,
+        "desc": "Single-origin Ethiopian beans, perfectly extracted.",
+        "img": "Espresso.png",
+        "source": "https://pariscafesf.com/menu/"
+    },
+    {
+        "id": 2,
+        "name": "Double Espresso",
+        "category": "espresso",
+        "usdPrice": 4,
+        "desc": "Double shot of intense, rich espresso.",
+        "img": "double-espresso.png",
+        "source": "https://www.cadencecoffeeco.com/menu"
+    },
+    {
+        "id": 3,
+        "name": "Caramel Latte",
+        "category": "latte",
+        "usdPrice": 5.54,
+        "desc": "Smooth espresso with steamed milk and caramel.",
+        "img": "latte.png",
+        "source": "https://joe.coffee/coffee-industry-trends/"
+    },
+    {
+        "id": 4,
+        "name": "Vanilla Latte",
+        "category": "latte",
+        "usdPrice": 5.54,
+        "desc": "Classic latte with premium vanilla syrup.",
+        "img": "iced-latte.png",
+        "source": "https://joe.coffee/coffee-industry-trends/"
+    },
+    {
+        "id": 5,
+        "name": "Signature Mocha",
+        "category": "mocha",
+        "usdPrice": 5.53,
+        "desc": "Rich chocolate and espresso harmony.",
+        "img": "mocha.png",
+        "source": "https://joe.coffee/coffee-industry-trends/"
+    },
+    {
+        "id": 6,
+        "name": "Classic Cappuccino",
+        "category": "cappuccino",
+        "usdPrice": 5.26,
+        "desc": "Perfectly balanced espresso, steamed milk, and foam.",
+        "img": "cappuccino.png",
+        "source": "https://joe.coffee/coffee-industry-trends/"
+    },
+    {
+        "id": 7,
+        "name": "Cold Brew",
+        "category": "coldbrew",
+        "usdPrice": 5.46,
+        "desc": "Smooth, slow-steeped cold brew coffee.",
+        "img": "cold-brew.png",
+        "source": "https://joe.coffee/coffee-industry-trends/"
+    },
+    {
+        "id": 8,
+        "name": "Iced Americano",
+        "category": "iced",
+        "usdPrice": 4.5,
+        "desc": "Refreshing cold Americano with a citrus touch.",
+        "img": "iced-americano.png",
+        "source": "https://pariscafesf.com/menu/"
+    },
+    {
+        "id": 9,
+        "name": "Iced Latte",
+        "category": "iced",
+        "usdPrice": 5.59,
+        "desc": "Chilled latte with a silky smooth texture.",
+        "img": "iced-latte.png",
+        "source": "https://joe.coffee/coffee-industry-trends/"
+    },
+    {
+        "id": 10,
+        "name": "Mango Smoothie",
+        "category": "smoothie",
+        "usdPrice": 8.99,
+        "desc": "Fresh mango blended with yogurt and honey.",
+        "img": "mango-smoothie.png",
+        "source": "https://pariscafesf.com/menu/"
+    },
+    {
+        "id": 11,
+        "name": "Oreo Milkshake",
+        "category": "smoothie",
+        "usdPrice": 6.99,
+        "desc": "Creamy milkshake with Oreo cookies.",
+        "img": "oreo-milkshake.png",
+        "source": "https://pariscafesf.com/menu/"
+    },
+    {
+        "id": 12,
+        "name": "Passion Fruit",
+        "category": "smoothie",
+        "usdPrice": 8.99,
+        "desc": "Tropical passion fruit with a tangy twist.",
+        "img": "passion-fruit.png",
+        "source": "https://pariscafesf.com/menu/"
+    },
+    {
+        "id": 13,
+        "name": "Blue Lagoon",
+        "category": "smoothie",
+        "usdPrice": 6,
+        "desc": "Refreshing blue lemonade with a vibrant color.",
+        "img": "blue-lagoon.png",
+        "source": "https://pariscafesf.com/menu/"
+    },
+    {
+        "id": 14,
+        "name": "Tiramisu",
+        "category": "desserts",
+        "usdPrice": 6.99,
+        "desc": "Classic Italian dessert with espresso-soaked layers.",
+        "img": "tiramisu.png",
+        "source": "https://www.onemillioncafeseattle.com/menu"
+    },
+    {
+        "id": 15,
+        "name": "Lava Cake",
+        "category": "desserts",
+        "usdPrice": 8.99,
+        "desc": "Warm chocolate lava with a melting center.",
+        "img": "lava-cake.png",
+        "source": "https://www.onemillioncafeseattle.com/menu"
+    },
+    {
+        "id": 16,
+        "name": "Croissant",
+        "category": "breakfast",
+        "usdPrice": 4.75,
+        "desc": "Buttery, flaky croissant made fresh daily.",
+        "img": "croissant.png",
+        "source": "https://pariscafesf.com/menu/"
+    },
+    {
+        "id": 17,
+        "name": "Flat White & Croissant",
+        "category": "breakfast",
+        "usdPrice": 9.99,
+        "desc": "Signature flat white with a freshly baked croissant.",
+        "img": "flat-white.png",
+        "source": "https://joe.coffee/coffee-industry-trends/"
+    }
 ];
+
+let cafeUsdRate = 268710;
+function cafeToman(amount){return Math.round((Number(amount)||0)*cafeUsdRate/1000)*1000;}
+function updateCafeToman(){document.querySelectorAll('.menu-item-irr[data-usd]').forEach(el=>{el.textContent=cafeToman(el.dataset.usd).toLocaleString('fa-IR')+' تومان';});const n=document.getElementById('cafeRateNote');if(n)n.textContent='نرخ دلار بازار آزاد: '+cafeUsdRate.toLocaleString('fa-IR')+' تومان · قیمت‌های مرجع بازار آمریکا، وعده استاندارد';}
+async function refreshCafeRate(){try{const res=await fetch('https://raw.githubusercontent.com/iran-market/iran-market.github.io/main/data/popular.json?v='+Date.now(),{cache:'no-store'});if(!res.ok)throw Error();const data=await res.json();const q=(data.data||[]).find(x=>x.symbol==='USD_IRR_FREE');const stamp=Date.parse(q&&q.timestamp||'');if(!q||q.stale||!Number.isFinite(stamp)||Date.now()-stamp>7200000)throw Error();cafeUsdRate=Number(q.price);}catch(e){}updateCafeToman();}
 
 const menuGrid = document.getElementById('menuGrid');
 
@@ -107,8 +248,9 @@ function renderMenu() {
                 <h3 class="menu-item-title">${item.name}</h3>
                 <p class="menu-item-desc">${item.desc}</p>
                 <div class="menu-item-bottom">
-                    <span class="menu-item-price">${item.price} T</span>
-                    <button class="menu-item-order">Order</button>
+                    <span class="menu-item-price">$${item.usdPrice.toFixed(2)} USD</span>
+                    <span class="menu-item-irr" data-usd="${item.usdPrice}">${cafeToman(item.usdPrice).toLocaleString('fa-IR')} تومان</span>
+                    <a class="menu-item-source" href="${item.source}" target="_blank" rel="noopener noreferrer">مرجع جهانی ↗</a>
                 </div>
             </div>
         </div>
@@ -116,6 +258,9 @@ function renderMenu() {
 }
 
 renderMenu();
+updateCafeToman();
+refreshCafeRate();
+setInterval(refreshCafeRate,30*60*1000);
 
 /* ================================================================
    گالری
